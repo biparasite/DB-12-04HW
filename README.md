@@ -27,9 +27,10 @@ HAVING (SELECT COUNT(*)
         FROM sakila.customer c
         WHERE c.store_id = s.store_id) > 300;
 ```
+
 <details> <summary>Скриншот к заданию 1</summary>
 
-![task1](https://github.com/biparasite/DB-12-04HW/blob/main/task2.png "task1")
+![task1](https://github.com/biparasite/DB-12-04HW/blob/main/task1.png "task1")
 
 </details>
 
