@@ -31,6 +31,9 @@ SELECT COUNT(*) FROM sakila.film f WHERE f.`length` < (SELECT AVG(f.`length` ) F
       <span style="content:url('biparasite/DB-12-04HW/blob/main/task2.png')"></span>
     </a>
   </div>
+
+[![logo](Google_media/logo.png "logo")](https://google.com)
+
 </details>
 
 ---
