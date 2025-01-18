@@ -12,6 +12,27 @@
 
 ### Ответ
 
+```SQL
+SELECT s.store_id,
+       CONCAT(s2.first_name, ' ', s2.last_name) AS 'STAFF NAME',
+       c2.city,
+       COUNT(c.customer_id) AS 'COUNT CUSTOMER'
+FROM sakila.store s
+JOIN sakila.staff s2 ON s2.store_id = s.store_id
+JOIN sakila.customer c ON c.store_id = s.store_id
+JOIN sakila.address a ON a.address_id = s.address_id
+JOIN sakila.city c2 ON c2.city_id = a.city_id
+GROUP BY s.store_id, c2.city, s2.staff_id
+HAVING (SELECT COUNT(*)
+        FROM sakila.customer c
+        WHERE c.store_id = s.store_id) > 300;
+```
+<details> <summary>Скриншот к заданию 1</summary>
+
+![task1](https://github.com/biparasite/DB-12-04HW/blob/main/task2.png "task1")
+
+</details>
+
 ---
 
 ## Задание 2
