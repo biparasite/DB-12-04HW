@@ -61,7 +61,20 @@ SELECT COUNT(*) FROM sakila.film f WHERE f.`length` < (SELECT AVG(f.`length` ) F
 ### Ответ
 
 ```SQL
-
+SELECT
+    MONTH(DATE(p.payment_date)) AS 'Month',
+    SUM(p.amount) AS 'Total Amount',
+    COUNT(p.rental_id) AS 'Rental Count'
+FROM sakila.payment p
+GROUP BY MONTH(DATE(p.payment_date))
+ORDER BY SUM(p.amount) DESC
+LIMIT 1;
 ```
+
+<details> <summary>Скриншот к заданию 3</summary>
+
+![task3](https://github.com/biparasite/DB-12-04HW/blob/main/task3.png "task3")
+
+</details>
 
 ---
