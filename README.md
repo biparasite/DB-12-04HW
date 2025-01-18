@@ -24,8 +24,7 @@
 SELECT COUNT(*) FROM sakila.film f WHERE f.`length` < (SELECT AVG(f.`length` ) FROM sakila.film f) ;
 ```
 
-<details>  
-  <summary>Скриншот к заданию 2</summary>    
+<details> <summary>Скриншот к заданию 2</summary>
 
 ![task2](https://github.com/biparasite/DB-12-04HW/blob/main/task2.png "task2")
 
