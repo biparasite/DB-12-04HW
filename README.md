@@ -32,7 +32,7 @@ SELECT COUNT(*) FROM sakila.film f WHERE f.`length` < (SELECT AVG(f.`length` ) F
     </a>
   </div>
 
-[![task2](biparasite/DB-12-04HW/blob/main/task2.png "task2")](https://github.com)
+[![task2](biparasite/DB-12-04HW/blob/main/task2.png "task2")](biparasite/DB-12-04HW/blob/main/task2.png)
 
 </details>
 
