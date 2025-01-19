@@ -65,11 +65,11 @@ WHERE f.`length` < (SELECT AVG(f.`length` ) FROM sakila.film f) ;
 
 ```SQL
 SELECT
-    MONTH(DATE(p.payment_date)) AS 'Month',
+    DATE_FORMAT(p.payment_date, '%Y-%m') AS 'Month',
     SUM(p.amount) AS 'Total Amount',
     COUNT(p.rental_id) AS 'Rental Count'
 FROM sakila.payment p
-GROUP BY MONTH(DATE(p.payment_date))
+GROUP BY DATE_FORMAT(p.payment_date, '%Y-%m')
 ORDER BY SUM(p.amount) DESC
 LIMIT 1;
 ```
